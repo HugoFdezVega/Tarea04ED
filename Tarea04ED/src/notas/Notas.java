@@ -11,7 +11,7 @@ public class Notas {
 		System.out.print("Introduzca una nota: ");
 		notaIntroducida = reader.nextInt();
 
-		calificacionFinal = califica(notaIntroducida);
+		calificacionFinal = notas.Califica.califica(notaIntroducida);
 
 		System.out.println(calificacionFinal);
 		reader.close();
@@ -20,28 +20,18 @@ public class Notas {
 	/**
 	 * @param notaIntroducida
 	 * @return
-	 * @deprecated Use {@link #califica(int)} instead
+	 * @deprecated Use {@link notas.Califica#califica(int)} instead
 	 */
 	public static String cali(int notaIntroducida) {
-		return califica(notaIntroducida);
+		return notas.Califica.califica(notaIntroducida);
 	}
 
 	/**
 	 * @param num_nota
 	 * @return
+	 * @deprecated Use {@link Califica#califica(int)} instead
 	 */
 	public static String califica(int num_nota) {
-		String calificacionFinal;
-		if (num_nota >= 0 && num_nota < 5)
-			calificacionFinal = "Suspenso";
-		else if (num_nota >= 5 && num_nota < 7)
-			calificacionFinal = "Aprobado";
-		else if (num_nota >= 7 && num_nota < 9)
-			calificacionFinal = "Notable";
-		else if (num_nota >= 9 && num_nota <= 10)
-			calificacionFinal = "Sobresaliente";
-		else
-			calificacionFinal = "La nota introducida no es correcta";
-		return calificacionFinal;
+		return Califica.califica(num_nota);
 	}
 }
