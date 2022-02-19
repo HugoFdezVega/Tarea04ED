@@ -3,8 +3,13 @@ package notas;
 public class Califica {
 
 	/**
+	 * * @author Hugo Fdez-Vega Álvarez
+	 * @version 1.0, 19/02/2022
 	 * @param num_nota
 	 * @return
+	 * Método que recibe un int como parámetro y entra en diversos if, comparando dicho int
+	 * para entrar en alguno (o en el else) y así devolver un mensaje tipo String con la
+	 * calificación asociada a dicha nota.
 	 */
 	public static String califica(int num_nota) {
 		String calificacionFinal;
